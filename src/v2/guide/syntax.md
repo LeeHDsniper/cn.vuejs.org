@@ -72,7 +72,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <button v-bind:disabled="isButtonDisabled">Button</button>
 ```
 
-如果 `isButtonDisabled` 的值是 `null`、`undefined` 或 `false`，则 `disabled` 特性甚至不会被包含在渲染出来的 `<button>` 元素中。
+如果 `isButtonDisabled` 的值是 `null`、`undefined` 或 `false`，则 `disabled` 特性甚至不会被包含在渲染出来的 `<button>` 元素中。因为这样显示的声明disabled==false没有意义，但是你仍然可以通过修改isButtonDisabled的值为true来响应式的修改disabled属性。
 
 ### 使用 JavaScript 表达式
 
@@ -94,7 +94,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <!-- 这是语句，不是表达式 -->
 {{ var a = 1 }}
 
-<!-- 流控制也不会生效，请使用三元表达式 -->
+<!-- 流程控制也不会生效，请使用三元表达式 -->
 {{ if (ok) { return message } }}
 ```
 
